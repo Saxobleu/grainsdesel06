@@ -1,0 +1,234 @@
+/* Présentation propre à la page Finance. */
+
+.finance-page a:not(.main-nav a) {
+    color: #65d5ff;
+    text-decoration-color: rgba(101, 213, 255, 0.65);
+}
+
+.finance-page a:not(.main-nav a):hover,
+.finance-page a:not(.main-nav a):focus {
+    color: #ffa500;
+}
+
+.finance-page .content-center {
+    position: relative;
+}
+
+.finance-introduction {
+    margin-bottom: 1rem;
+    color: var(--color-text-muted);
+}
+
+.finance-introduction h1 {
+    margin-bottom: 0.7rem;
+    color: var(--color-primary-orange);
+    font-family: var(--font-headings);
+    font-size: 2rem;
+}
+
+.finance-introduction p,
+.finance-introduction li {
+    line-height: 1.55;
+}
+
+.finance-introduction ul {
+    margin: 0.35rem 0 0.7rem;
+    padding-left: 1.25rem;
+}
+
+.finance-pdf-links {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0 0 1rem;
+}
+
+.finance-pdf-links a {
+    display: flex;
+    flex: 1 1 0;
+    max-width: 8rem;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    text-align: center;
+    font-size: 0.78rem;
+}
+
+.pdf-icon {
+    display: flex;
+    width: 48px;
+    height: 56px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    background: var(--color-primary-red);
+    font-size: 0.82rem;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.finance-sheet {
+    width: 100%;
+    padding: 1.5rem;
+    color: var(--color-text-muted);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-medium);
+}
+
+.finance-sheet h1 {
+    color: var(--color-primary-orange);
+    font-family: var(--font-headings);
+    font-size: 2rem;
+}
+
+.finance-subtitle {
+    color: var(--color-accent-cyan);
+    margin: 0.25rem 0 1.5rem;
+}
+
+.finance-sheet h2 {
+    color: var(--color-accent-green);
+    font-family: var(--font-headings);
+    font-size: 1.2rem;
+    margin: 1.4rem 0 0.7rem;
+}
+
+.finance-sheet h3 {
+    color: var(--color-accent-cyan);
+    font-size: 1rem;
+    margin-bottom: 0.35rem;
+}
+
+.finance-sheet p,
+.finance-sheet li {
+    line-height: 1.55;
+}
+
+.finance-sheet ul,
+.finance-sheet ol {
+    padding-left: 1.25rem;
+}
+
+.finance-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.finance-card {
+    padding: 0.9rem;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: var(--radius-small);
+}
+
+.finance-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.finance-table th,
+.finance-table td {
+    padding: 0.55rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: left;
+    vertical-align: top;
+}
+
+.finance-table th {
+    color: var(--color-accent-cyan);
+}
+
+.finance-note {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 0.8rem;
+}
+
+/* L'aperçu du calendrier recouvre la colonne centrale. */
+.finance-calendar-preview {
+    display: none;
+    position: absolute;
+    inset: 0;
+    z-index: 30;
+    min-height: calc(100vh - 130px);
+    padding: 1rem;
+    align-items: flex-start;
+    justify-content: center;
+    background: rgba(11, 27, 36, 0.97);
+    border: 2px solid var(--color-accent-cyan);
+    border-radius: var(--radius-medium);
+}
+
+.finance-calendar-preview.visible {
+    display: flex;
+}
+
+.finance-calendar-preview:not(.locked) {
+    pointer-events: none;
+}
+
+.finance-calendar-preview a {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 165px);
+    align-items: center;
+    justify-content: center;
+}
+
+.finance-calendar-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: var(--radius-small);
+}
+
+.finance-preview-close {
+    display: none;
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    background: var(--color-primary-red);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.finance-calendar-preview.locked .finance-preview-close {
+    display: block;
+}
+
+@media (max-width: 1200px) {
+    .finance-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1024px) {
+    .finance-calendar-preview {
+        position: fixed;
+        inset: 1rem;
+        min-height: 0;
+        z-index: 2000;
+    }
+
+    .finance-calendar-preview a {
+        height: 100%;
+    }
+
+    .finance-table {
+        display: block;
+        overflow-x: auto;
+    }
+}

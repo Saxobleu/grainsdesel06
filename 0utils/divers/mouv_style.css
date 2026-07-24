@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.grain-animation {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e8f5e9, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.grain-animation::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#a5d6a7 2px, transparent 2px);
+  background-size: 40px 40px;
+  animation: floatBg 20s linear infinite;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+@keyframes floatBg {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50px); }
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(12px) scale(0.98);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  max-width: 600px;
+  margin: auto;
+  padding: .5rem;
+  box-sizing: border-box;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  color: #2e7d32;
+  margin: .2rem 0;
+}
+
+p {
+  color: #444;
+  font-size: 1.05em;
+  margin: .15rem 0 0;
+}
+
+.stem {
+  stroke: #2e7d32;
+  stroke-width: 4;
+  fill: none;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: grow 3s ease forwards;
+}
+
+.leaf {
+  fill: #66bb6a;
+  opacity: 0;
+  animation: appear 2s ease forwards 2s;
+}
+
+.soil {
+  fill: #8d6e63;
+}
+
+.flow {
+  stroke: #43a047;
+  stroke-width: 3;
+  fill: none;
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: flowAnim 4s linear infinite;
+}
+
+.node {
+  fill: #66bb6a;
+}
+
+.person {
+  fill: #81c784;
+}
+
+.hands {
+  stroke: #2e7d32;
+  stroke-width: 4;
+  fill: none;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: drawHands 3s ease forwards;
+}
+
+.pulse {
+  fill: none;
+  stroke: #66bb6a;
+  stroke-width: 4;
+  animation: pulseAnim 2s infinite;
+}
+
+@keyframes grow {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes appear {
+  to { opacity: 1; }
+}
+
+@keyframes flowAnim {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes drawHands {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes pulseAnim {
+  0% { r: 40; opacity: 1; }
+  100% { r: 60; opacity: 0; }
+}

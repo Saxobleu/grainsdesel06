@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>Grains de SEL - Système d'Échange Local de Saint-cézaire-sur-Siagne</title>
+	
+    <meta name="description"
+          content="Découvrez Grains de SEL, association d'échange local dans les Alpes-Maritimes : échange de services de savoirs, coups de main, ateliers et rencontres conviviales.">
+
+    <link rel="canonical" href="https://grainsdesel06.fr/">
+
+    <link rel="shortcut icon"
+          href="0utils/img/Logo-SEL.ico"
+          type="image/x-icon">
+	
+    <link rel="stylesheet" href="0utils/css/grains.css?v=20260723-1">
+
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="0utils/img/Logo_avec_texte_V2_0.png" alt="Grains de SEL Logo" class="site-logo">
+        </div>
+        <article id="seo-about" class="seo-about" aria-labelledby="seo-about-title">
+            <div class="seo-about-content">
+                <h1 id="seo-about-title">
+                    <span class="title-desktop">Qu’est-ce que Grains de SEL 06&nbsp;?</span>
+                    <span class="title-mobile">Grains de SEL 06, c’est quoi&nbsp;?</span>
+                </h1>
+                <h2>Un Système d’Échange Local</h2>
+                <p>Fondé sur l’échange de biens, de services et de savoir-faire.</p>
+                <p><em>J’ai besoin</em> : je demande, je prends. Je rends si c'est un prêt.<br>
+                   <em>J’ai</em> : je propose de prêter ou de donner.<br>
+                   <em>On demande</em> : je propose ce que j’ai ou ce que je sais faire.</p>
+                <p>Ces échanges se font sans argent, sans échange obligatoire et sans promesse.</p>
+                <h2>Des ateliers associatifs</h2>
+                <ul>
+                    <li>Cuisine</li>
+                    <li>Bricolage</li>
+                    <li>Loisirs créatifs</li>
+                    <li>Relaxation et méditation</li>
+                    <li>Astuces de grand-mère</li>
+                    <li>Patrimoine et placements</li>
+                </ul>
+                <p class="seo-about-purpose">Notre objectif principal&nbsp;: faire vivre la bienveillance, la convivialité, la générosité et le partage.</p>
+                <h2>Localisation</h2>
+                <p>Saint-Cézaire-sur-Siagne (Alpes Maritimes) et ses environs : Pays de Grasse, Bassin de la Siagne.</p>
+            </div>
+            <button id="seo-about-toggle" class="seo-about-toggle" type="button"
+                    aria-expanded="false" aria-controls="seo-about"
+                    aria-label="Afficher la présentation complète">⌄</button>
+        </article>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-trigger">Ateliers <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Cuisine</a></li>
+                        <li><a href="#">Bricolage</a></li>
+                        <li><a href="finance.html">Finance</a></li>
+                    </ul>
+                </li>
+                <li><button id="print-calendar-button" class="nav-print-button" type="button">Impression</button></li>
+                <li><a href="#">Mentions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-layout">
+        
+        <section class="sidebar-left home-poster-column">
+            <div class="animation-container">
+                <iframe src="0utils/divers/mouv_index.html" class="animation-iframe" title="Animation Grains de SEL"></iframe>
+            </div>
+            <div id="default-welcome-view">
+                <a id="welcome-link" href="#">
+                    <img id="welcome-img" src="0utils/img/Mettez_du_SEL_dans_votre_vie_(1).jpg" alt="Mettez du SEL dans votre vie !" class="welcome-img">
+                </a>
+            </div>
+        </section>
+
+        <section class="content-center">
+            <div class="calendar-widget">
+                <div class="calendar-header">
+                    <button id="prev-month" class="cal-btn">◀</button>
+                    <h3 id="calendar-title" class="font-heading"></h3>
+                    <button id="next-month" class="cal-btn">▶</button>
+                </div>
+                <div class="calendar-weekdays">
+                    <div>Lun</div><div>Mar</div><div>Mer</div><div>Jeu</div><div>Ven</div><div>Sam</div><div>Dim</div>
+                </div>
+                <div class="calendar-relative-wrapper">
+                    <div id="calendar-grid" class="calendar-grid">
+                        </div>
+                    <div id="calendar-hover-preview" class="calendar-hover-preview" aria-hidden="true">
+                        <img id="calendar-hover-img" src="" alt="">
+                    </div>
+                    <div id="calendar-overlay-instruction" class="calendar-overlay-text">
+                        passer sur une date cochée pour voir l'image,<br>cliquer sur le bouton pour aller à la page.
+                    </div>
+                </div>
+            </div>
+            
+            <div id="activity-preview-container" class="activity-preview-hidden">
+                <div class="preview-card-wrapper">
+                    <button id="close-preview" aria-label="Fermer">&times;</button>
+                    <a id="activity-link" href="#">
+                        <img id="activity-img" src="" alt="Aperçu verrouillé">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="sidebar-right">
+            <div class="gallery-grid">
+                <img src="0utils/img/sel_chemins_de_sante.jpeg" alt="Chemins de santé">
+                <img src="0utils/img/sel_cuisineici_ailleurs.jpeg" alt="Cuisine d'ici et d'ailleurs">
+                <a href="finance.html" ><img src="0utils/img/sel_gestion_patrimoine.jpeg" alt="Gestion de patrimoine"></a>
+                <img src="0utils/img/sel_loisirs_creatifs.jpeg" alt="Loisirs créatifs">
+            </div>
+        </section>
+
+    </main>
+
+    <section id="print-about-page" class="print-about-page" aria-hidden="true"></section>
+    <section id="print-calendar-pages" class="print-calendar-pages" aria-hidden="true"></section>
+
+    <script src="0utils/js/grains.js?v=20260723-1"></script>
+</body>
+</html>
